@@ -50,8 +50,8 @@
       admin_username: azureuser
       ssh_password_enabled: false
       ssh_public_keys:
-        - path: /Users/masoudmoeini/.ssh/id_rsa.pub
-          key_data: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqQMcFyVaS2WHXj93ckmTIUYLBM9d5aX3text8vEq5oxo6FiYIBFCI13VervO4l/ztYU+yFW4cuRB2Ogspw+QW9t7wQqzRM6KPpV6XFzzSWLYR+tLIbnNbeMdJaXYXJdM+gZjiCN2oYEkQi68GYGTHKXn0EXlQ+ztdZMx1M2ABtYuAyAoBe2KGTYDGd6wtDq5a6OwBc/MdOJPWrILS2GdlDupw8xUHiSFYNnyDTt74qTo2mihOr0EVd0yRni0/9DfTuoNgpxBPXYfXZkC4pECvtuhElExtfofvxEnJN3nDPbybs6DAPCtbDmcxoQfzVgpPujl9/ug1pXCOH05uumt65i8bwalUAKt3s0c+DioDJi5SRH2WIhovr3Om8Xejw3OXdn/HOhyHO6/tJyN/XUmjNucrb1sFx9kVqdhxfDSRf++7vuAkJKjF0dMAItoQqEnpZaX6htPeocBA1pl8kN4H60p3AYBjtqc/jeaAfMBq73mElvrGboXLmzDTvo3OObyhUe/0IdKJDqyJsPmWfufpt8G9CvvHq6DaEpyqxyQb5aRTw7BTfxHladk8hf8h84ZJo1ky9si++uIv1apv8t6C/tjwYOX2W3zue6Ac1z+zpQIKH2FMfckcCNDED3IF8Pa+I6GJ06QKixgaCXjO8Zn+RcnDGHsg5KEI7f7UdWrDxw== masoudmoeini@MacBook-Pro.local"
+        - path: /Users/masoudmoeini/.ssh/
+          key_data: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvefZL5n3uHvL+VggLVXJ/i5Ct9/qTyQCwC0OqHEj3T ansible-flask-web-app"
       network_interfaces: myNIC
       image:
         offer: CentOS
