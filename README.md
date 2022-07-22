@@ -27,6 +27,7 @@ openssl rand -hex 6
 ssh-keygen -t ed25519 -f ~/.ssh/ansbile_8f4f13923647 -C ansible-flask-web-app
 cat ~/.ssh/ansbile_8f4f13923647 >> private.key
 ```
+```
 ssh azureuser@<vm_ip_address>
 ```
 ``` 
