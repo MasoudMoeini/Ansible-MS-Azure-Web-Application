@@ -9,6 +9,7 @@ Configure Linux Machine on Azure<br/>
 ``` 
 az group create --name QuickstartAnsible-rg --location eastus
 ```
+```
 az vm create \
 --resource-group QuickstartAnsible-rg \
 --name QuickstartAnsible-vm \
