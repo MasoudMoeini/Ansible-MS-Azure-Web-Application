@@ -1,5 +1,5 @@
 # Ansible MSAzure Web Application
-[Reference1](https://docs.microsoft.com/en-us/azure/developer/ansible/vm-configure?tabs=ansible)
+[Reference1](https://docs.microsoft.com/en-us/azure/developer/ansible/vm-configure?tabs=ansible)<br/>
 Create an SSH key pair
 ```
 ssh-keygen -m PEM -t rsa -b 4096
