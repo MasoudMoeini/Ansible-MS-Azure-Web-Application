@@ -1,0 +1,9 @@
+---
+- name: Installing Flask App in Virtual Machine
+  hosts: localhost
+  remote_user: azureuser
+  connection: local
+  become: yes
+
+  roles:
+  - flask

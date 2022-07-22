@@ -1,0 +1,46 @@
+---
+- name: Ensure python3-pip is at the latest version
+  apt:
+    name: python3-pip
+    state: latest
+    update_cache: yes 
+
+- name: install the package, force upgrade
+  pip:
+    name: pip
+    executable: pip3
+    state: latest
+- name: Create a destination app directory if it does not exist
+  file:
+    path: /home/azureuser/app/templates
+    state: directory
+    #mode: '0755'
+- name: Your copy task
+  copy: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: 'files/app.py', dest: '/home/azureuser/app/app.py' }
+    - { src: 'files/main.py', dest: '/home/azureuser/app/main.py'  }
+    - { src: 'files/minst.py', dest: '/home/azureuser/app/minst.py' }
+    - { src: 'files/model.h5', dest: '/home/azureuser/app/model.h5' }
+    - { src: 'files/requirements.txt', dest: '/home/azureuser/app/requirements.txt' }
+
+- name: copy contents of templates directory
+  copy:
+    src: files/templates/ 
+    dest: /home/azureuser/app/templates/
+    directory_mode:
+  tags:
+    - dircontent
+    #- name: copy contents of templates folder
+     # copy: src=/templates/ dest=/home/azureuser/app/templates/ remote_src=yes directory_mode=yes   
+- name: install python libraries
+  pip:
+    requirements: /home/azureuser/app/requirements.txt
+    extra_args: --no-cache-dir
+- name: copy template systemd service config
+  copy:
+    src: files/.service
+    dest: /etc/systemd/system/flask.service
+
+- name: Start Systemd Flask App Service 
+  systemd: name=flask state=started daemon_reload=yes
