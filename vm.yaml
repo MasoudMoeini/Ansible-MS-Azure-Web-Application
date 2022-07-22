@@ -1,0 +1,9 @@
+---
+- name: Installing Virtual Machine
+  hosts: localhost
+  remote_user: azureuser
+  connection: local
+  become: yes
+
+  roles:
+  - vm
