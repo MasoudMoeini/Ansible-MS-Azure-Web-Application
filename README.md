@@ -5,6 +5,15 @@ Deploying Flask Web Application to Linux (centos 7.7.1908) vitual Machine in MS-
 ```
 az login
 ```
+```
+openssl rand -hex 6
+ssh-keygen -t ed25519 -f ~/.ssh/ansbile_8f4f13923647 -C ansible-flask-web-app
+cat ~/.ssh/ansbile_8f4f13923647 >> private.key
+```
+```
+ansible-playbook ansible-azure-vm.yaml -vvv
+```
+# Manually set up 
 Configure Linux Machine on Azure<br/>
 ``` 
 az group create --name QuickstartAnsible-rg --location eastus
