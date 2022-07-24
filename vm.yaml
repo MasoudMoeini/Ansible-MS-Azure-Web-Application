@@ -1,8 +1,8 @@
 ---
 - name: Installing Azure Virtual Machine
-  hosts: all
-  remote_user: azureuser
-  become: yes
+  hosts: localhost
+  connection: local
+
 
   roles:
   - vm

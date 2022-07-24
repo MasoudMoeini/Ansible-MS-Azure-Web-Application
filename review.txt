@@ -1,1 +1,7 @@
 ansible-playbook vm.yaml -vvv
+[defaults]
+stdout_callback = debug
+interpreter_python= /usr/local/bin/python3.10
+
+curl -O https://raw.githubusercontent.com/ansible-collections/azure/dev/requirements-azure.txt
+pip install -r requirements-azure.txt
