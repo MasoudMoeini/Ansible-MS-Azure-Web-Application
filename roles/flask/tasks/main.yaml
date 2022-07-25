@@ -1,15 +1,23 @@
 ---
-- name: Ensure python3-pip is at the latest version
-  apt:
+# - name: Ensure python3-pip is at the latest version
+#   apt:
+#     name: python3-pip
+#     state: latest
+#     update_cache: yes 
+- name: Enable EPEL Repository on CentOS 7
+  yum:
+    name: epel-release
+    state: latest
+- name: Installing pip3 on centOS with yum 
+  yum:
     name: python3-pip
     state: latest
     update_cache: yes 
-
-- name: install the package, force upgrade
+- name: install and upgrade pip
   pip:
     name: pip
+    extra_args: --upgrade
     executable: pip3
-    state: latest
 - name: Create a destination app directory if it does not exist
   file:
     path: /home/azureuser/app/templates

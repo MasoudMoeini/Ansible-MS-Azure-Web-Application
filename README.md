@@ -22,6 +22,9 @@ Creating ssh pair keys and replacing the public key value in roles/vm/tasks/main
 ssh-keygen -m PEM -t rsa -b 4096
 cat ~/.ssh/id_rsa.pub
 ```
+```
+chmod 600 /Users/masoudmoeini/.ssh/id_rsa 
+```
 Running ansible to create virtual machine
 ``` 
 ansible-playbook vm.yaml
@@ -39,6 +42,7 @@ Further process
 ansible-playbook ansible-azure-vm.yaml -vvv
 ```
 ``` 
+ansible-playbook -u user -i <public_ip_address>, flask.yaml
 ansible-playbook -u user -i <public_ip_address>, --private-key private.key flask.yaml
 ```
 # Clean up Resources

@@ -11,3 +11,4 @@ pip freeze
 pip uninstall azure
 #connect to vitual machine 
 ssh azureuser@52.186.157.228
+pip3 install -r requirements.txt

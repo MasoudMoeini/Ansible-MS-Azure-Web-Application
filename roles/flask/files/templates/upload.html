@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<title>Python Flask File Tensorflow App</title>
+<style>
+	body {
+	  background-color: rgb(164, 252, 156);
+	  color: black;
+	}
+	h1{
+    	text-align: center;
+    }
+	h2{
+    	text-align: center;
+    }
+
+	form{
+		text-align: center;
+	}
+	</style>
+	
+
+<h1><span style="font-size: 32px">Select Your Image to Upload</span></h1>
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+			<input type="submit" value="Submit">
+		</p>
+    </dl>
+   <!--  <p>
+		<input type="submit" value="Submit">
+	</p> -->
+</form>
+<p><span style="font-size: 32px">
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+	<!-- <input class="favorite styled"
+       type="button"
+       value="OK"> -->
+ </span></p>
+<!-- {% if filename %}
+	<div>
+		<img src="{{ url_for('display_image', filename=filename) }}">
+	</div>
+{% endif %} -->
+
+
+</html>

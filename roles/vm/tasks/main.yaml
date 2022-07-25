@@ -34,6 +34,12 @@
           access: Allow
           priority: 1001
           direction: Inbound
+        - name: Port_5000
+          protocol: Tcp
+          destination_port_range: 5000
+          access: Allow
+          priority: 1011
+          direction: Inbound
   - name: Create virtual network interface card
     azure_rm_networkinterface:
       resource_group: myResourceGroup

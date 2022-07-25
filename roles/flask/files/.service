@@ -1,0 +1,9 @@
+[Unit]
+Description=Systemd instance to serve flask App
+[Service]
+WorkingDirectory=/home/azureuser/app
+ExecStart=/usr/bin/python3 main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
