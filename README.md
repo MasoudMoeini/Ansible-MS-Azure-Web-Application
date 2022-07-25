@@ -3,8 +3,13 @@
 [Reference 2](https://docs.microsoft.com/en-us/azure/developer/ansible/vm-configure?tabs=ansible)<br/>
 [Reference 3](https://dev.to/cloudskills/deploy-a-windows-vm-to-azure-with-ansible-2l9m)<br/>
 Deploying Flask Web Application to Linux (centos 7.7.1908) vitual Machine in MS-Azure<br>
+Installing Dependencies<br/>
 ```
 pip install 'ansible[azure]'
+```
+```
+curl -O https://raw.githubusercontent.com/ansible-collections/azure/dev/requirements-azure.txt
+pip install -r requirements-azure.txt
 ```
 ```
 brew install python
