@@ -11,4 +11,8 @@ pip freeze
 pip uninstall azure
 #connect to vitual machine 
 ssh azureuser@52.186.157.228
-pip3 install -r requirements.txt
+
+To run application you need to install python3.9 on centOs(pip3.9 install flask)
+pip3.9 install -r requirements.txt
+****to run app in app folder*** 
+python3.9 main.py
