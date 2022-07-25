@@ -5,3 +5,9 @@ interpreter_python= /usr/local/bin/python3.10
 
 curl -O https://raw.githubusercontent.com/ansible-collections/azure/dev/requirements-azure.txt
 pip install -r requirements-azure.txt
+
+error handelling :
+pip freeze
+pip uninstall azure
+#connect to vitual machine 
+ssh azureuser@52.186.157.228

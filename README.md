@@ -12,19 +12,40 @@ curl -O https://raw.githubusercontent.com/ansible-collections/azure/dev/requirem
 pip install -r requirements-azure.txt
 ```
 ```
-brew install python
-```
-```
 az login
 ```
+Creating ssh pair keys and replacing the public key value in roles/vm/tasks/main.yaml
 ```
-openssl rand -hex 6
-ssh-keygen -t ed25519 -f ~/.ssh/ansbile_8f4f13923647 -C ansible-flask-web-app
-cat ~/.ssh/ansbile_8f4f13923647 >> private.key
+ssh-keygen -m PEM -t rsa -b 4096
+cat ~/.ssh/id_rsa.pub
 ```
+Running ansible to create virtual machine
+``` 
+ansible-playbook vm.yaml
+```
+To get VM public IP 
+```
+az vm show -d -g myResourceGroup -n myVM --query publicIps -o tsv
+```
+To connect VM 
+```
+ssh azureuser@<vm_ip_address>
+```
+Further process
 ```
 ansible-playbook ansible-azure-vm.yaml -vvv
 ```
+``` 
+ansible-playbook -u user -i <public_ip_address>, --private-key private.key flask.yaml
+```
+# Clean up Resources
+```
+az group delete --name myResourceGroup
+``` 
+```
+az group show --name <resource_group>
+```
+
 # Manually set up 
 Configure Linux Machine on Azure<br/>
 ``` 
@@ -36,7 +57,7 @@ az vm create \
 --name QuickstartAnsible-vm \
 --image OpenLogic:CentOS:7.7:latest \
 --admin-username azureuser \
---admin-password 
+--admin-password <your password>
 ```
 Get the public Ip address of the Azure virtual machine
 ```
@@ -44,27 +65,14 @@ az vm show -d -g QuickstartAnsible-rg -n QuickstartAnsible-vm --query publicIps 
 ```
 Create ssh pair key and Connect to your virtual machine via SSH
 ```
+Excluded
 openssl rand -hex 6
 ssh-keygen -t ed25519 -f ~/.ssh/ansbile_8f4f13923647 -C ansible-flask-web-app
 cat ~/.ssh/ansbile_8f4f13923647 >> private.key
 ```
-```
-ssh azureuser@<vm_ip_address>
-```
-``` 
-ansible-playbook -u user -i <public_ip_address>, --private-key private.key flask.yaml
-```
-```
-Excluded
-ssh-keygen -m PEM -t rsa -b 4096
-cat ~/.ssh/id_rsa.pub
-```
-Clean up Resources
-```
-az group delete --name QuickstartAnsible-rg
-``` 
-```
-az group show --name <resource_group>
-```
+
+
+
+
 
 
