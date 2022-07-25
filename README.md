@@ -42,7 +42,7 @@ The flask application is available at below url
 http://<vm_ip_address>:5000 
 ```
 You should see something similar<br/>
-<img width="668" alt="Screenshot 2022-07-25 at 16 24 36" src="https://user-images.githubusercontent.com/43514418/180801271-56cb3fed-3335-4a2f-8408-2a90980879a2.png"><br>
+<img width="630" alt="Screenshot 2022-07-25 at 16 29 06" src="https://user-images.githubusercontent.com/43514418/180801647-bc2bb874-9901-425e-9d85-bfcd3abc9b34.png"><br>
 Further process
 ```
 ansible-playbook ansible-azure-vm.yaml -vvv
