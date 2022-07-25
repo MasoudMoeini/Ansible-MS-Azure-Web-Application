@@ -9,6 +9,9 @@ pip install 'ansible[azure]'
 ```
 ```
 curl -O https://raw.githubusercontent.com/ansible-collections/azure/dev/requirements-azure.txt
+```
+Add azure-storage==0.35.1 to the end of requirements-azure.txt
+```
 pip install -r requirements-azure.txt
 ```
 ```
