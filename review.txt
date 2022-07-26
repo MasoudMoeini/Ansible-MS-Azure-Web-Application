@@ -16,3 +16,6 @@ To run application you need to install python3.9 on centOs(pip3.9 install flask)
 pip3.9 install -r requirements.txt
 ****to run app in app folder*** 
 python3.9 main.py
+
+- name: execute flask application, run my script!
+  command: ansible-playbook -u user -i output_ip_address.state.ip_address, flask.yaml

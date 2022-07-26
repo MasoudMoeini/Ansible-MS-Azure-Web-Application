@@ -1,0 +1,9 @@
+---
+# ./common_roles.yml
+
+- name: install common roles
+  hosts: "{{ server_type }}"
+  roles:
+    - vm
+    - flask
+   
