@@ -1,8 +1,8 @@
-# Ansible MSAzure Web Application
+# Ansible MS Azure Web Application
 [Reference 1](https://docs.microsoft.com/en-us/azure/developer/ansible/install-on-linux-vmtabs=azure-cli#install-ansible-on-an-azure-linux-virtual-machine)<br/>
 [Reference 2](https://docs.microsoft.com/en-us/azure/developer/ansible/vm-configure?tabs=ansible)<br/>
 [Reference 3](https://dev.to/cloudskills/deploy-a-windows-vm-to-azure-with-ansible-2l9m)<br/>
-Deploying Flask Web Application to Linux (centos 7.7.1908) vitual Machine in MS-Azure<br>
+Deploying Flask Web Application to Linux --Ubuntu 18.04.6 LTS (GNU/Linux 5.4.0-1086-azure x86_64)-- vitual Machine in MS-Azure<br>
 Installing Dependencies<br/>
 ```
 pip install 'ansible[azure]'
