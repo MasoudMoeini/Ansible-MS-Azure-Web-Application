@@ -33,6 +33,10 @@ To get VM public IP
 ```
 az vm show -d -g myResourceGroup -n myVM --query publicIps -o tsv
 ```
+Installing flask web application 
+```
+ansible-playbook -u user -i <public_ip_address>, flask.yaml
+```
 To connect VM 
 ```
 ssh azureuser@<vm_ip_address>
@@ -43,14 +47,7 @@ http://<vm_ip_address>:5000
 ```
 You should see something similar<br/>
 <img width="630" alt="Screenshot 2022-07-25 at 16 29 06" src="https://user-images.githubusercontent.com/43514418/180801647-bc2bb874-9901-425e-9d85-bfcd3abc9b34.png"><br>
-Further process
-```
-ansible-playbook ansible-azure-vm.yaml -vvv
-```
-``` 
-ansible-playbook -u user -i <public_ip_address>, flask.yaml
-ansible-playbook -u user -i <public_ip_address>, --private-key private.key flask.yaml
-```
+
 # Clean up Resources
 ```
 az group delete --name myResourceGroup
