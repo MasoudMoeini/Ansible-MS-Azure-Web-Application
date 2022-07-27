@@ -53,7 +53,7 @@ You should see something similar<br/>
 az group delete --name myResourceGroup
 ``` 
 ```
-az group show --name <resource_group>
+az group show --name myResourceGroup
 ```
 
 # Manually set up 
