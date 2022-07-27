@@ -19,3 +19,7 @@ python3.9 main.py
 
 - name: execute flask application, run my script!
   command: ansible-playbook -u user -i output_ip_address.state.ip_address, flask.yaml
+
+ - name: SSH Connect to linux machine !
+    command: ssh azureuser@"{{ output_ip_address.state.ip_address }}"
+- import_playbook: flask.yaml
